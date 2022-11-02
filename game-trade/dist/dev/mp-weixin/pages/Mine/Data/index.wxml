@@ -1,0 +1,1 @@
+<view class="data data-v-2231d815"><image class="avatar data-v-2231d815" src="{{a}}" mode="aspectFill"></image><view class="information data-v-2231d815"><view class="name data-v-2231d815"><view class="text data-v-2231d815">{{b}}</view><view class="t-icon t-icon-xiugai data-v-2231d815" bindtap="{{c}}"></view></view><view class="id data-v-2231d815">ID:{{d}}</view></view></view>

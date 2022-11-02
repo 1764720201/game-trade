@@ -1,0 +1,1 @@
+<view class="logout data-v-5be27bbd" bindtap="{{a}}">退出登录</view>

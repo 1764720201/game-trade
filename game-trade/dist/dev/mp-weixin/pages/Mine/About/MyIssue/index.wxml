@@ -1,0 +1,1 @@
+<about wx:if="{{b}}" bindoption="{{a}}" u-i="be9db9c6-0" bind:__l="__l" u-p="{{b}}"></about><about-option wx:if="{{c}}" u-i="be9db9c6-1" bind:__l="__l" u-p="{{c}}"></about-option>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "设置",
+  "usingComponents": {
+    "uni-popup-dialog": "../../../../uni_modules/uni-popup/components/uni-popup-dialog/uni-popup-dialog",
+    "uni-popup": "../../../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "log-out": "../../../../uni_modules/uni-id-pages/pages/userinfo/log-out/index",
+    "item": "../../../../components/Item/index"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="sell data-v-e4b06a0e"><view class="title data-v-e4b06a0e">游戏</view><view class="game data-v-e4b06a0e"><view wx:for="{{a}}" wx:for-item="item" wx:key="c" class="item data-v-e4b06a0e" bindtap="{{item.d}}"><image class="icon data-v-e4b06a0e" src="{{item.a}}" mode="aspectFill"></image><view class="name data-v-e4b06a0e">{{item.b}}</view></view></view></view>

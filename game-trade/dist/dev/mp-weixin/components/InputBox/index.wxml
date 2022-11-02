@@ -1,0 +1,1 @@
+<view class="input data-v-15c50f14" style="{{f}}"><slot></slot><view class="title data-v-15c50f14">{{a}}</view><block wx:if="{{r0}}"><input class="input-content data-v-15c50f14" placeholder="{{b}}" bindinput="{{c}}" type="{{d}}" placeholder-class="plac" value="{{e}}"/></block></view>

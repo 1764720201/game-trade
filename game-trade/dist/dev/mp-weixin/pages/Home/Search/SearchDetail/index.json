@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "d-search-log": "../../../../uni_modules/d-search-log/components/d-search-log/d-search-log",
+    "list": "../../../../components/List/index"
+  }
+}

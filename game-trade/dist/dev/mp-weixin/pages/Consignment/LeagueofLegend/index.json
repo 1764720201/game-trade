@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-data-select": "../../../uni_modules/uni-data-select/components/uni-data-select/uni-data-select",
+    "check": "../../../components/Check/index",
+    "file": "../../../components/File/index",
+    "input-box": "../../../components/InputBox/index",
+    "price": "../../../components/Price/index",
+    "next": "../../../components/Button/index"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "账号详情",
+  "usingComponents": {
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "options": "../../components/Options/index",
+    "basic": "../../components/Basic/index"
+  }
+}

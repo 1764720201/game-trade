@@ -1,0 +1,146 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 主题色 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.detail.data-v-fcd0e390 {
+  width: 86%;
+  margin-left: 7%;
+}
+.detail .flow.data-v-fcd0e390 {
+  margin-top: 30rpx;
+  height: 260rpx;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+.detail .flow .header.data-v-fcd0e390 {
+  justify-content: space-between;
+  display: flex;
+  font-weight: 900;
+  font-size: 35rpx;
+}
+.detail .flow .body.data-v-fcd0e390 {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail .flow .body .outer.data-v-fcd0e390 {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: rgba(87, 105, 238, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .flow .body .outer .inner.data-v-fcd0e390 {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #5769ee;
+}
+.detail .flow .body .line.data-v-fcd0e390 {
+  width: 90rpx;
+  height: 1rpx;
+  background-color: #5769ee;
+}
+.detail .flow .text.data-v-fcd0e390 {
+  width: 97%;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.detail .flow .text .item.data-v-fcd0e390:nth-child(2) {
+  margin-left: -28rpx;
+}
+.detail .flow .text .item.data-v-fcd0e390:nth-child(3) {
+  margin-left: -40rpx;
+}
+.detail .flow .footer.data-v-fcd0e390 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25rpx;
+  color: #eaa24d;
+}
+.detail .flow .tips.data-v-fcd0e390 {
+  font-size: 25rpx;
+  color: #ccc;
+}
+.detail .options.data-v-fcd0e390 {
+  height: 100rpx;
+  margin-top: 30rpx;
+  width: 120%;
+  margin-left: -30rpx;
+  display: flex;
+  align-items: center;
+}
+.detail .options .item.data-v-fcd0e390 {
+  width: 260rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: white;
+  border-radius: 25rpx;
+  margin-left: 30rpx;
+}
+.tabbar.data-v-fcd0e390 {
+  background-color: #e0e2e5;
+  height: 180rpx;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
+  box-shadow: 0 0 5rpx #ccc;
+}
+.tabbar .collect.data-v-fcd0e390 {
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+}
+.tabbar .purchase.data-v-fcd0e390,
+.tabbar .consult.data-v-fcd0e390 {
+  margin-left: -40rpx;
+  height: 80rpx;
+  width: 250rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.tabbar .purchase.data-v-fcd0e390 {
+  color: white;
+  background-color: #5869ee;
+}
+.tabbar .consult.data-v-fcd0e390 {
+  background-color: rgba(88, 105, 238, 0.2);
+}

@@ -1,0 +1,1 @@
+<view class="consignment data-v-3c08fa6c"><genshin-impact wx:if="{{a}}" class="data-v-3c08fa6c" u-i="3c08fa6c-0" bind:__l="__l"></genshin-impact><leagueof-legend wx:if="{{b}}" class="data-v-3c08fa6c" u-i="3c08fa6c-1" bind:__l="__l"></leagueof-legend><glory-of-the-king wx:if="{{c}}" class="data-v-3c08fa6c" u-i="3c08fa6c-2" bind:__l="__l"></glory-of-the-king></view>

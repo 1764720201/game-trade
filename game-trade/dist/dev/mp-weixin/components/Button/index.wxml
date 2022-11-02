@@ -1,0 +1,1 @@
+<view class="button data-v-28521965" bindtap="{{d}}"><view class="next-step data-v-28521965"><slot></slot><view class="title data-v-28521965">{{a}}</view></view><view wx:if="{{b}}" class="icon data-v-28521965"><uni-icons wx:if="{{c}}" class="data-v-28521965" u-i="28521965-0" bind:__l="__l" u-p="{{c}}"></uni-icons></view></view>

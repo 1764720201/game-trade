@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "search": "./Search/index",
+    "slide": "./Slide/index",
+    "category": "./Category/index"
+  }
+}

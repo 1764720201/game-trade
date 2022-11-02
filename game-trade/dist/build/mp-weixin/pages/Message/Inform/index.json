@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "系统通知",
+  "usingComponents": {
+    "uni-dateformat": "../../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat"
+  }
+}

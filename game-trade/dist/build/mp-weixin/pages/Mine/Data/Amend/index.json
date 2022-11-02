@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "昵称修改",
+  "usingComponents": {
+    "amend": "../../../../components/Button/index"
+  }
+}

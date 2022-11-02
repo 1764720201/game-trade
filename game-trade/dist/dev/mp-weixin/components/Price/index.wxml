@@ -1,0 +1,1 @@
+<view class="price data-v-0c06dc8c"><view class="item data-v-0c06dc8c"> 手续费 <view class="service data-v-0c06dc8c">￥{{a}}</view></view><view class="item data-v-0c06dc8c"> 实际收入 <view class="truth data-v-0c06dc8c">￥{{b}}</view></view></view><view class="tips data-v-0c06dc8c">平台收取售价的5%作为手续费,单笔最少收取￥20</view>

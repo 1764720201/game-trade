@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "check": "../../../components/Check/index",
+    "file": "../../../components/File/index",
+    "input-box": "../../../components/InputBox/index",
+    "price": "../../../components/Price/index",
+    "next": "../../../components/Button/index"
+  }
+}

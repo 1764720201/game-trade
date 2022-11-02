@@ -1,0 +1,1 @@
+"use strict";var e=require("./user.js"),s=require("./LeagueofLegend.js"),r=require("./GenshinImpact.js"),u=require("./detail.js");exports.useStore=function(){return{user:e.useUser(),LeagueofLegend:s.useLeagueofLegend(),GenshinImpact:r.useGenshinImpact(),detail:u.useDetail()}};

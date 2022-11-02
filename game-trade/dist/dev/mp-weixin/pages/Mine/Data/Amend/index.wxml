@@ -1,0 +1,1 @@
+<view class="amend data-v-4bdcb6d5"><view class="originName data-v-4bdcb6d5"><input type="text" class="input data-v-4bdcb6d5" value="{{a}}" bindinput="{{b}}"/></view><amend wx:if="{{d}}" class="data-v-4bdcb6d5" bindclick="{{c}}" u-i="4bdcb6d5-0" bind:__l="__l" u-p="{{d}}"></amend></view>

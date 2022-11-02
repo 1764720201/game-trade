@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/Home/index",
+    "pages/Order/index",
+    "pages/Sell/index",
+    "pages/Message/index",
+    "pages/Mine/index",
+    "pages/Consignment/index",
+    "pages/Publish/index",
+    "pages/Home/Search/SearchDetail/index",
+    "pages/Detail/index",
+    "pages/Detail/Buy/index",
+    "pages/Mine/Data/Amend/index",
+    "pages/Mine/About/MyCollect/index",
+    "pages/Mine/About/Verify/index",
+    "pages/Mine/About/AfterSale/index",
+    "pages/Mine/About/MyIssue/index",
+    "pages/Mine/About/MyPurcharse/index",
+    "pages/Mine/About/MySale/index",
+    "pages/Mine/About/MyWallet/index",
+    "pages/Mine/About/MyWallet/DealDetail/index",
+    "pages/Message/Inform/index",
+    "pages/Message/Consult/index",
+    "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+    "pages/Mine/Other/Team/index",
+    "pages/Mine/Other/Cooperation/index",
+    "pages/Mine/Other/HelpCentre/index",
+    "pages/Mine/Other/Opinion/index",
+    "pages/Mine/Other/Opinion/OpinionType/index",
+    "pages/Mine/Other/Set/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/Home/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/首页.png",
+        "selectedIconPath": "static/tabbar/首页选中.png"
+      },
+      {
+        "pagePath": "pages/Order/index",
+        "text": "订单",
+        "iconPath": "static/tabbar/订单.png",
+        "selectedIconPath": "static/tabbar/订单选中 .png"
+      },
+      {
+        "pagePath": "pages/Sell/index",
+        "text": "卖号",
+        "iconPath": "static/tabbar/卖号.png",
+        "selectedIconPath": "static/tabbar/卖号.png"
+      },
+      {
+        "pagePath": "pages/Message/index",
+        "text": "消息",
+        "iconPath": "static/tabbar/消息.png",
+        "selectedIconPath": "static/tabbar/消息选中.png"
+      },
+      {
+        "pagePath": "pages/Mine/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/我的.png",
+        "selectedIconPath": "static/tabbar/我的选中.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {}
+}

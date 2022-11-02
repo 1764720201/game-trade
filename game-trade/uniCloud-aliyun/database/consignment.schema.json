@@ -1,0 +1,150 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["game"],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"foreignKey": "uni-id-users._id",
+			"defaultValue": {
+				"$env": "uid"
+			}
+		},
+		"game": {
+			"bsonType": "string",
+			"foreignKey": "category.name",
+			"description": "游戏名"
+		},
+		"create_time": {
+			"bsonType": "timestamp",
+			"defaultValue": {
+				"$env": "now"
+			}
+		},
+		"region": {
+			"bsonType": "string",
+			"description": "大区"
+		},
+		"server": {
+			"bsonType": "string",
+			"description": "服务器"
+		},
+		"state": {
+			"bsonType": "int",
+			"description": "状态 0表示上架 1表示已下架 2表示已售出"
+		},
+		"email": {
+			"bsonType": "string",
+			"description": "邮箱"
+		},
+		"accountInfo": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"description": "账号信息"
+		},
+		"screenshot": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"description": "游戏截图"
+		},
+		"level": {
+			"bsonType": "string",
+			"description": "冒险等级"
+		},
+		"dazzling": {
+			"bsonType": "string",
+			"description": "炫彩数"
+		},
+		"skin": {
+			"bsonType": "string",
+			"description": "皮肤数"
+		},
+		"grading": {
+			"bsonType": "string",
+			"description": "单双排段位"
+		},
+		"otherBright": {
+			"bsonType": "string",
+			"description": "其它亮点"
+		},
+		"emailImage": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"description": "邮箱截图"
+		},
+		"technology": {
+			"bsonType": "string",
+			"description": "是否为科技号"
+		},
+		"autonym": {
+			"bsonType": "string",
+			"description": "是否提供实名信息"
+		},
+		"price": {
+			"bsonType": "double",
+			"description": "价格"
+		},
+		"account": {
+			"bsonType": "string",
+			"description": "账号"
+		},
+		"password": {
+			"bsonType": "string",
+			"description": "密码"
+		},
+		"phone": {
+			"bsonType": "string",
+			"description": "手机号"
+		},
+		"materials": {
+			"bsonType": "string",
+			"description": "包赔材料"
+		},
+		"express": {
+			"bsonType": "string",
+			"description": "急速回收"
+		},
+		"amount": {
+			"bsonType": "string",
+			"description": "英雄数"
+		},
+		"rare": {
+			"bsonType": "string",
+			"description": "龙瞎炫彩"
+		},
+		"qualification": {
+			"bsonType": "string",
+			"description": "峡谷之巅资格"
+		},
+		"forestall": {
+			"bsonType": "string",
+			"description": "是否抢先服"
+		},
+		"legend": {
+			"bsonType": "string",
+			"description": "星传说"
+		},
+		"campsite": {
+			"bsonType": "string",
+			"description": "营地ID"
+		},
+		"homepage": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"description": "主页截图"
+		},
+		"national": {
+			"bsonType": "string",
+			"description": "国标"
+		}
+	}
+}

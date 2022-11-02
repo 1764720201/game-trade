@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "data": "./Data/index",
+    "about": "./About/index",
+    "other": "./Other/index"
+  }
+}

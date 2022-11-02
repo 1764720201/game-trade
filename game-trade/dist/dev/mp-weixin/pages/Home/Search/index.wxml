@@ -1,0 +1,1 @@
+<view class="search data-v-15b00d87" bindtap="{{b}}"><view class="search-content data-v-15b00d87"><view class="search-content-text data-v-15b00d87">请输入游戏名</view><uni-icons wx:if="{{a}}" class="data-v-15b00d87" u-i="15b00d87-0" bind:__l="__l" u-p="{{a}}"></uni-icons></view></view>

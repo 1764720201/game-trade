@@ -1,0 +1,1 @@
+"use strict";var e=require("../../common/vendor.js");Math||(e.unref(n)+e.unref(r)+e.unref(t))();const n=()=>"./Data/index.js",r=()=>"./About/index.js",t=()=>"./Other/index.js",a=e.defineComponent({__name:"index",setup:e=>(e,n)=>({})});var s=e._export_sfc(a,[["__scopeId","data-v-5c63194e"]]);wx.createPage(s);

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "usingComponents": {
+    "unicloud-db": "../../../../node-modules/@dcloudio/uni-components/lib/unicloud-db/unicloud-db"
+  }
+}

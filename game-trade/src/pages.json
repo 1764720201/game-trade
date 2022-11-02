@@ -1,0 +1,251 @@
+{
+	"pages": [{
+			"name": "home",
+			"path": "pages/Home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"name": "order",
+			"path": "pages/Order/index",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"name": "sell",
+			"path": "pages/Sell/index",
+			"style": {
+				"navigationBarTitleText": "卖号"
+			}
+		},
+		{
+			"name": "message",
+			"path": "pages/Message/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"name": "mine",
+			"path": "pages/Mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"name": "consignment",
+			"path": "pages/Consignment/index",
+			"style": {
+				"navigationBarTitleText": "省心寄售"
+			}
+		},
+		{
+			"name": "publish",
+			"path": "pages/Publish/index",
+			"style": {
+				"navigationBarTitleText": "省心寄售"
+			}
+		},
+		{
+			"name": "search",
+			"path": "pages/Home/Search/SearchDetail/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"name": "detail",
+			"path": "pages/Detail/index",
+			"style": {
+				"navigationBarTitleText": "账号详情"
+			}
+		},
+		{
+			"name": "buy",
+			"path": "pages/Detail/Buy/index",
+			"style": {
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		{
+			"name": "amend",
+			"path": "pages/Mine/Data/Amend/index",
+			"style": {
+				"navigationBarTitleText": "昵称修改"
+			}
+		},
+		{
+			"name": "mycollect",
+			"path": "pages/Mine/About/MyCollect/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+		},
+		{
+			"name": "verify",
+			"path": "pages/Mine/About/Verify/index",
+			"style": {
+				"navigationBarTitleText": "验证客服"
+			}
+		},
+		{
+			"name": "afterSale",
+			"path": "pages/Mine/About/AfterSale/index",
+			"style": {
+				"navigationBarTitleText": "售后服务"
+			}
+		},
+		{
+			"name": "myIssue",
+			"path": "pages/Mine/About/MyIssue/index",
+			"style": {
+				"navigationBarTitleText": "我发布的"
+			}
+		},
+		{
+			"name": "myPurcharse",
+			"path": "pages/Mine/About/MyPurcharse/index",
+			"style": {
+				"navigationBarTitleText": "我购买的"
+			}
+		},
+		{
+			"name": "mysale",
+			"path": "pages/Mine/About/MySale/index",
+			"style": {
+				"navigationBarTitleText": "我卖出的"
+			}
+		},
+		{
+			"name": "myWallet",
+			"path": "pages/Mine/About/MyWallet/index",
+			"style": {
+				"navigationBarTitleText": "我的钱包"
+			}
+		},
+		{
+			"name": "dealDetail",
+			"path": "pages/Mine/About/MyWallet/DealDetail/index",
+			"style": {
+				"navigationBarTitleText": "交易明细"
+			}
+		},
+		{
+			"name": "inform",
+			"path": "pages/Message/Inform/index",
+			"style": {
+				"navigationBarTitleText": "系统通知"
+			}
+		},
+		{
+			"name": "consult",
+			"path": "pages/Message/Consult/index",
+			"style": {
+				"navigationBarTitleText": "专属客服"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"name": "team",
+			"path": "pages/Mine/Other/Team/index",
+			"style": {
+				"navigationBarTitleText": "团队招募"
+			}
+		},
+		{
+			"name": "cooperation",
+			"path": "pages/Mine/Other/Cooperation/index",
+			"style": {
+				"navigationBarTitleText": "商务合作"
+			}
+		},
+		{
+			"name": "helpCentre",
+			"path": "pages/Mine/Other/HelpCentre/index",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},
+		{
+			"name": "opinion",
+			"path": "pages/Mine/Other/Opinion/index",
+			"style": {
+				"navigationBarTitleText": "意见与反馈"
+			}
+		},
+		{
+			"name": "opinionType",
+			"path": "pages/Mine/Other/Opinion/OpinionType/index",
+			"style": {
+				"navigationBarTitleText": "意见与反馈"
+			}
+		},
+		{
+			"name": "set",
+			"path": "pages/Mine/Other/Set/index",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		}
+	],
+	"subPackages": [],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#1296db",
+		"borderStyle": "white",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/Home/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/首页.png",
+				"selectedIconPath": "static/tabbar/首页选中.png"
+			},
+			{
+				"pagePath": "pages/Order/index",
+				"text": "订单",
+				"iconPath": "static/tabbar/订单.png",
+				"selectedIconPath": "static/tabbar/订单选中 .png"
+			},
+			{
+				"pagePath": "pages/Sell/index",
+				"text": "卖号",
+				"iconPath": "static/tabbar/卖号.png",
+				"selectedIconPath": "static/tabbar/卖号.png"
+			},
+			{
+				"pagePath": "pages/Message/index",
+				"text": "消息",
+				"iconPath": "static/tabbar/消息.png",
+				"selectedIconPath": "static/tabbar/消息选中.png"
+			},
+			{
+				"pagePath": "pages/Mine/index",
+				"text": "我的",
+				"iconPath": "static/tabbar/我的.png",
+				"selectedIconPath": "static/tabbar/我的选中.png"
+			}
+		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	}
+}

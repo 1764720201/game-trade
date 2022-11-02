@@ -1,0 +1,1 @@
+"use strict";var e=require("../../../common/vendor.js");const r={};if(!Array){e.resolveComponent("uni-icons")()}Math;var o=e._export_sfc(r,[["render",function(r,o){return{a:e.p({type:"search",size:"30",color:"#1296db"})}}],["__scopeId","data-v-9535c4e0"]]);wx.createComponent(o);

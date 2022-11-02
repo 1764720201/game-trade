@@ -1,0 +1,247 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 主题色 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.category.data-v-14aa105d {
+  margin-top: 30rpx;
+  width: 100%;
+}
+.category-item.data-v-14aa105d {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-item .name.data-v-14aa105d {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+}
+.category-item .game.data-v-14aa105d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category-item .game .image.data-v-14aa105d {
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+}
+.category-item .more.data-v-14aa105d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category-item .more .t-icon.data-v-14aa105d {
+  width: 75rpx;
+  height: 75rpx;
+}
+.category-item .more .name.data-v-14aa105d {
+  position: relative;
+  top: 13rpx;
+  color: #a9a9a9;
+}
+.more-game.data-v-14aa105d {
+  background-color: white;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  padding: 30rpx;
+}
+.more-game .header.data-v-14aa105d {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.more-game .header .title.data-v-14aa105d {
+  margin-left: 33%;
+}
+.more-game .title.data-v-14aa105d {
+  font-size: 37rpx;
+  font-weight: 900;
+  margin-left: 10rpx;
+}
+.more-game .more-category.data-v-14aa105d {
+  display: flex;
+  flex-wrap: wrap;
+}
+.more-game .more-category .more-item.data-v-14aa105d {
+  margin-top: 40rpx;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+}
+.more-game .more-category .more-item .image.data-v-14aa105d {
+  border-radius: 50%;
+  width: 105rpx;
+  height: 105rpx;
+  margin-bottom: 15rpx;
+}
+.condition.data-v-14aa105d {
+  padding: 30rpx;
+  background-color: white;
+  display: flex;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  justify-content: space-between;
+}
+.condition .area.data-v-14aa105d,
+.condition .order.data-v-14aa105d,
+.condition .screen.data-v-14aa105d {
+  height: 40rpx;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chooseArea.data-v-14aa105d,
+.chooseScreen.data-v-14aa105d {
+  width: 630rpx;
+  border-top-left-radius: 40rpx;
+  background-color: white;
+  height: 100%;
+}
+.chooseArea .region.data-v-14aa105d,
+.chooseArea .server.data-v-14aa105d,
+.chooseArea .price.data-v-14aa105d,
+.chooseArea .materials.data-v-14aa105d,
+.chooseArea .grading.data-v-14aa105d,
+.chooseArea .email.data-v-14aa105d,
+.chooseScreen .region.data-v-14aa105d,
+.chooseScreen .server.data-v-14aa105d,
+.chooseScreen .price.data-v-14aa105d,
+.chooseScreen .materials.data-v-14aa105d,
+.chooseScreen .grading.data-v-14aa105d,
+.chooseScreen .email.data-v-14aa105d {
+  padding: 20rpx;
+}
+.chooseArea .region .title.data-v-14aa105d,
+.chooseArea .server .title.data-v-14aa105d,
+.chooseArea .price .title.data-v-14aa105d,
+.chooseArea .materials .title.data-v-14aa105d,
+.chooseArea .grading .title.data-v-14aa105d,
+.chooseArea .email .title.data-v-14aa105d,
+.chooseScreen .region .title.data-v-14aa105d,
+.chooseScreen .server .title.data-v-14aa105d,
+.chooseScreen .price .title.data-v-14aa105d,
+.chooseScreen .materials .title.data-v-14aa105d,
+.chooseScreen .grading .title.data-v-14aa105d,
+.chooseScreen .email .title.data-v-14aa105d {
+  font-weight: 900;
+  margin-left: 15rpx;
+}
+.chooseArea .region .list.data-v-14aa105d,
+.chooseArea .server .list.data-v-14aa105d,
+.chooseArea .price .list.data-v-14aa105d,
+.chooseArea .materials .list.data-v-14aa105d,
+.chooseArea .grading .list.data-v-14aa105d,
+.chooseArea .email .list.data-v-14aa105d,
+.chooseScreen .region .list.data-v-14aa105d,
+.chooseScreen .server .list.data-v-14aa105d,
+.chooseScreen .price .list.data-v-14aa105d,
+.chooseScreen .materials .list.data-v-14aa105d,
+.chooseScreen .grading .list.data-v-14aa105d,
+.chooseScreen .email .list.data-v-14aa105d {
+  display: flex;
+  flex-wrap: wrap;
+}
+.chooseArea .region .list .item.data-v-14aa105d,
+.chooseArea .server .list .item.data-v-14aa105d,
+.chooseArea .price .list .item.data-v-14aa105d,
+.chooseArea .materials .list .item.data-v-14aa105d,
+.chooseArea .grading .list .item.data-v-14aa105d,
+.chooseArea .email .list .item.data-v-14aa105d,
+.chooseScreen .region .list .item.data-v-14aa105d,
+.chooseScreen .server .list .item.data-v-14aa105d,
+.chooseScreen .price .list .item.data-v-14aa105d,
+.chooseScreen .materials .list .item.data-v-14aa105d,
+.chooseScreen .grading .list .item.data-v-14aa105d,
+.chooseScreen .email .list .item.data-v-14aa105d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23rpx;
+  margin-top: 25rpx;
+  margin-left: 15rpx;
+  width: 180rpx;
+  height: 75rpx;
+  border-radius: 10rpx;
+  background-color: #eef0f1;
+}
+.chooseArea .region .list .active.data-v-14aa105d,
+.chooseArea .server .list .active.data-v-14aa105d,
+.chooseArea .price .list .active.data-v-14aa105d,
+.chooseArea .materials .list .active.data-v-14aa105d,
+.chooseArea .grading .list .active.data-v-14aa105d,
+.chooseArea .email .list .active.data-v-14aa105d,
+.chooseScreen .region .list .active.data-v-14aa105d,
+.chooseScreen .server .list .active.data-v-14aa105d,
+.chooseScreen .price .list .active.data-v-14aa105d,
+.chooseScreen .materials .list .active.data-v-14aa105d,
+.chooseScreen .grading .list .active.data-v-14aa105d,
+.chooseScreen .email .list .active.data-v-14aa105d {
+  background-color: #dcddea;
+  color: #4c5acc;
+}
+.chooseArea .footer.data-v-14aa105d,
+.chooseScreen .footer.data-v-14aa105d {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.chooseArea .footer .confirm.data-v-14aa105d,
+.chooseArea .footer .reset.data-v-14aa105d,
+.chooseScreen .footer .confirm.data-v-14aa105d,
+.chooseScreen .footer .reset.data-v-14aa105d {
+  width: 280rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.chooseArea .footer .confirm.data-v-14aa105d,
+.chooseScreen .footer .confirm.data-v-14aa105d {
+  background-color: #5869ee;
+  color: white;
+}
+.chooseArea .footer .reset.data-v-14aa105d,
+.chooseScreen .footer .reset.data-v-14aa105d {
+  background-color: rgba(88, 105, 238, 0.2);
+  color: #5869ee;
+}
+.orderList.data-v-14aa105d {
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  height: 400rpx;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+}
