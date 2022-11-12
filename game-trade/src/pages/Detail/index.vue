@@ -64,7 +64,7 @@
 			></uni-icons>
 			收藏
 		</view>
-		<view class="consult">咨询客服</view>
+		<view class="consult" @click="goConsult">咨询客服</view>
 		<view class="purchase" @click="goBuy">立即购买</view>
 	</view>
 </template>
@@ -134,7 +134,7 @@ onLoad(async options => {
 const verifyCollect = async () => {
 	await db
 		.collection('collect')
-		.where(`consignment_id=='${detail._id}'&&user_id=='${detail.user_id}'`)
+		.where(`consignment_id=='${detail._id}'&&user_id=='${userId.value}'`)
 		.get({ getOne: true })
 		.then(res => {
 			if (res.result.data) {
@@ -150,6 +150,7 @@ const verifyCollect = async () => {
 // 判断是否已收藏
 const collected = ref<boolean>(false);
 //收藏
+const { userId } = storeToRefs(store.user);
 const collect = async () => {
 	// 如果没有收藏，则点击收藏
 	if (!collected.value) {
@@ -169,7 +170,7 @@ const collect = async () => {
 		await db
 			.collection('collect')
 			.where(
-				`consignment_id=='${detail._id}'&&user_id=='${detail.user_id}'`
+				`consignment_id=='${detail._id}'&&user_id=='${userId.value}'`
 			)
 			.remove()
 			.then(async () => {
@@ -185,6 +186,12 @@ const collect = async () => {
 const goBuy = () => {
 	uni.navigateTo({
 		url: `/pages/Detail/Buy/index?id=${detail._id}`
+	});
+};
+// 进入客服界面
+const goConsult = () => {
+	uni.navigateTo({
+		url: '/pages/Message/Consult/index'
 	});
 };
 </script>

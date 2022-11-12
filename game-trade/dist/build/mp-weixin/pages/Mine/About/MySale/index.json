@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我卖出的",
+  "usingComponents": {
+    "about-option": "../../../../components/AboutOption/index",
+    "about": "../../../../components/About/index"
+  }
+}

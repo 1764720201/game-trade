@@ -29,23 +29,55 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         url: `/pages/Detail/index?id=${id}`
       });
     };
-    const udb = common_vendor.ref(null);
-    const soldOut = common_vendor.ref(null);
+    const content = common_vendor.ref("");
+    const udb = common_vendor.ref();
+    const soldOut = common_vendor.ref();
+    const currentType = common_vendor.ref("");
     const currentId = common_vendor.ref();
-    const deleteIssue = (id) => {
+    const deleteIssue = (id, type) => {
+      currentType.value = type;
       currentId.value = id;
+      content.value = "\u4F60\u786E\u5B9A\u8981\u4E0B\u67B6\u5546\u54C1\u5417";
       soldOut.value.open("center");
     };
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
+    const currentConsignmentId = common_vendor.ref();
     const dialogConfirm = async () => {
-      await db.collection("consignment").where(`_id=='${currentId.value}'`).update({
-        state: 1
-      });
+      if (currentType.value == "takegood") {
+        await db.collection("purchase").where(`_id=='${currentId.value}'`).update({
+          state: 2
+        }).then(() => {
+          db.collection("purchase").where(`_id=='${currentConsignmentId.value}'`).update({
+            state: 2
+          });
+        });
+      } else {
+        await db.collection("consignment").where(`_id=='${currentId.value}'`).update({
+          state: 1
+        });
+      }
       udb.value.refresh();
     };
     common_vendor.onReachBottom(() => {
       udb.value.loadMore();
     });
+    const confirmTakeGoods = (item, type) => {
+      currentConsignmentId.value = item.consignment_id;
+      currentType.value = type;
+      currentId.value = item._id;
+      content.value = "\u4F60\u786E\u5B9A\u8981\u786E\u8BA4\u6536\u8D27\u5417";
+      soldOut.value.open("center");
+    };
+    const popup = common_vendor.ref();
+    const account = common_vendor.ref("");
+    const password = common_vendor.ref("");
+    const getAccount = async (id) => {
+      await db.collection("consignment").where(`_id=='${id}'`).get().then((res) => {
+        account.value = res.result.data[0].account;
+        password.value = res.result.data[0].password;
+      });
+      popup.value.open();
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.w(({
@@ -71,7 +103,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
                 }),
                 g: item.state == 0
               }, item.state == 0 ? {
-                h: common_vendor.o(($event) => deleteIssue(item._id)),
+                h: common_vendor.o(($event) => deleteIssue(item._id, "type")),
                 i: "eb73a736-2-" + i0 + "-" + i1 + ",eb73a736-0",
                 j: common_vendor.p({
                   type: "trash",
@@ -83,14 +115,18 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
                 l: __props.collection == "consignment"
               }, __props.collection == "consignment" ? {} : {}, {
                 m: __props.collection == "purchase"
-              }, __props.collection == "purchase" ? {} : {}) : {}, {
-                n: item.state == 2
+              }, __props.collection == "purchase" ? {
+                n: common_vendor.o(($event) => confirmTakeGoods(item, "takegood"))
+              } : {}) : {}, {
+                o: item.state == 2
               }, item.state == 2 ? common_vendor.e({
-                o: __props.collection == "consignment"
+                p: __props.collection == "consignment"
               }, __props.collection == "consignment" ? {} : {}, {
-                p: __props.collection == "purchase"
-              }, __props.collection == "purchase" ? {} : {}) : {}, {
-                q: item._id
+                q: __props.collection == "purchase"
+              }, __props.collection == "purchase" ? {
+                r: common_vendor.o(($event) => getAccount(item.consignment_id))
+              } : {}) : {}, {
+                s: item._id
               });
             })
           }, {
@@ -112,7 +148,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         c: common_vendor.p({
           collection: __props.collection,
           orderby: "create_time desc",
-          field: "screenshot,_id,create_time,game,price,state",
+          field: "screenshot,_id,create_time,game,price,state,consignment_id",
           getone: false,
           where: props.where,
           ["page-size"]: 4
@@ -122,13 +158,21 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           type: "warning",
           cancelText: "\u53D6\u6D88",
           confirmText: "\u786E\u8BA4",
-          content: "\u4F60\u786E\u5B9A\u8981\u4E0B\u67B6\u5546\u54C1\u5417"
+          content: content.value
         }),
         f: common_vendor.sr(soldOut, "eb73a736-3", {
           "k": "soldOut"
         }),
         g: common_vendor.p({
           type: "dialog"
+        }),
+        h: common_vendor.t(account.value),
+        i: common_vendor.t(password.value),
+        j: common_vendor.sr(popup, "eb73a736-5", {
+          "k": "popup"
+        }),
+        k: common_vendor.p({
+          type: "center"
         })
       };
     };

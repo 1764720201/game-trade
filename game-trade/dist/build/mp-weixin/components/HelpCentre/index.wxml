@@ -1,0 +1,1 @@
+<view class="tab-item data-v-1c1e0e2f"><view wx:for="{{a}}" wx:for-item="item" wx:key="c" class="help-item data-v-1c1e0e2f"><item wx:if="{{item.b}}" class="data-v-1c1e0e2f" u-i="{{item.a}}" bind:__l="__l" u-p="{{item.b}}"></item></view></view>

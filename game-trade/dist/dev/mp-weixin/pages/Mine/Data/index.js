@@ -11,6 +11,9 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   setup(__props) {
     const store = store_index.useStore();
     const { userInfo } = common_vendor.storeToRefs(store.user);
+    common_vendor.onLoad(() => {
+      store.user.getUserInfo();
+    });
     const goAmend = () => {
       common_vendor.index.navigateTo({
         url: "/pages/Mine/Data/Amend/index"

@@ -64,12 +64,12 @@
   width: 20rpx;
   height: 20rpx;
   border-radius: 50%;
-  background-color: #5769ee;
+  background-color: rgb(87, 105, 238);
 }
 .detail .flow .body .line.data-v-fcd0e390 {
   width: 90rpx;
   height: 1rpx;
-  background-color: #5769ee;
+  background-color: rgb(87, 105, 238);
 }
 .detail .flow .text.data-v-fcd0e390 {
   width: 97%;
@@ -139,7 +139,7 @@
 }
 .tabbar .purchase.data-v-fcd0e390 {
   color: white;
-  background-color: #5869ee;
+  background-color: rgb(88, 105, 238);
 }
 .tabbar .consult.data-v-fcd0e390 {
   background-color: rgba(88, 105, 238, 0.2);

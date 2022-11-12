@@ -34,7 +34,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const recharge = () => {
       inputDialog.value.open();
     };
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const confirmRecharge = async (e) => {
       await db.collection("balance").add({
         money: parseFloat(e)
@@ -42,6 +42,44 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       store.user.getBalance();
       common_vendor.index.showToast({
         title: "\u5145\u503C\u6210\u529F"
+      });
+    };
+    const price = common_vendor.ref();
+    const getPrice = (e) => {
+      price.value = e;
+    };
+    const account = common_vendor.ref("");
+    const getAccount = (e) => {
+      account.value = e;
+    };
+    const withdraw = async () => {
+      if (!price.value) {
+        common_vendor.index.showToast({
+          title: "\u8BF7\u8F93\u5165\u63D0\u73B0\u7684\u91D1\u989D",
+          icon: "none"
+        });
+        return;
+      }
+      if (!account.value) {
+        common_vendor.index.showToast({
+          title: "\u8BF7\u8F93\u5165\u652F\u4ED8\u5B9D\u8D26\u53F7",
+          icon: "none"
+        });
+        return;
+      }
+      if (price.value > balance.value) {
+        common_vendor.index.showToast({
+          title: "\u63D0\u73B0\u7684\u91D1\u989D\u4E0D\u80FD\u5927\u4E8E\u4F59\u989D",
+          icon: "none"
+        });
+        return;
+      }
+      await db.collection("balance").add({
+        money: -Number(price.value)
+      });
+      store.user.getBalance();
+      common_vendor.index.showToast({
+        title: "\u63D0\u73B0\u6210\u529F"
       });
     };
     return (_ctx, _cache) => {
@@ -54,33 +92,36 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         b: common_vendor.o(goDealDetail),
         c: common_vendor.t(common_vendor.unref(balance).toFixed(2)),
         d: common_vendor.o(recharge),
-        e: common_vendor.p({
+        e: common_vendor.o(getPrice),
+        f: common_vendor.p({
           title: "\u63D0\u73B0\u91D1\u989D",
           position: "left",
           type: "number",
           tips: "\u8BF7\u8F93\u5165\u63D0\u73B0\u91D1\u989D"
         }),
-        f: common_vendor.p({
+        g: common_vendor.o(getAccount),
+        h: common_vendor.p({
           title: "\u652F\u4ED8\u5B9D",
           position: "left",
           type: "text",
           tips: "\u8BF7\u8F93\u5165\u652F\u4ED8\u5B9D\u8D26\u53F7"
         }),
-        g: common_vendor.p({
+        i: common_vendor.o(withdraw),
+        j: common_vendor.p({
           title: "\u63D0\u73B0"
         }),
-        h: common_vendor.sr("inputClose", "92a6cd5c-5,92a6cd5c-4"),
-        i: common_vendor.o(confirmRecharge),
-        j: common_vendor.p({
+        k: common_vendor.sr("inputClose", "92a6cd5c-5,92a6cd5c-4"),
+        l: common_vendor.o(confirmRecharge),
+        m: common_vendor.p({
           mode: "input",
           title: "\u7834\u89E3\u7248",
           value: _ctx.m,
           placeholder: "\u8BF7\u8F93\u5165\u5145\u503C\u7684\u91D1\u989D"
         }),
-        k: common_vendor.sr(inputDialog, "92a6cd5c-4", {
+        n: common_vendor.sr(inputDialog, "92a6cd5c-4", {
           "k": "inputDialog"
         }),
-        l: common_vendor.p({
+        o: common_vendor.p({
           type: "dialog"
         })
       };

@@ -2,7 +2,7 @@
 var common_vendor = require("../../../../common/vendor.js");
 var uni_modules_uniIdPages_config = require("../../config.js");
 var uni_modules_uniIdPages_common_store = require("../../common/store.js");
-const db = common_vendor.pn.database();
+const db = common_vendor.rn.database();
 db.collection("uni-id-users");
 const _sfc_main = {
   computed: {
@@ -310,7 +310,7 @@ const _sfc_main = {
         type
       });
       let action = "loginBy" + type.trim().replace(type[0], type[0].toUpperCase());
-      const uniIdCo = common_vendor.pn.importObject("uni-id-co", {
+      const uniIdCo = common_vendor.rn.importObject("uni-id-co", {
         customUI: true
       });
       uniIdCo[action](params).then((result) => {

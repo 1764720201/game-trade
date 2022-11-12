@@ -1,1 +1,1 @@
-<view class="amend data-v-3898b726"><view class="originName data-v-3898b726"><input type="text" class="input data-v-3898b726" value="{{a}}" bindinput="{{b}}"/></view><amend wx:if="{{d}}" class="data-v-3898b726" bindclick="{{c}}" u-i="3898b726-0" bind:__l="__l" u-p="{{d}}"></amend></view>
+<view class="amend data-v-e7bd3d6c"><view class="originName data-v-e7bd3d6c"><input type="text" class="input data-v-e7bd3d6c" value="{{a}}" bindinput="{{b}}"/></view><amend wx:if="{{d}}" class="data-v-e7bd3d6c" bindclick="{{c}}" u-i="e7bd3d6c-0" bind:__l="__l" u-p="{{d}}"></amend></view>

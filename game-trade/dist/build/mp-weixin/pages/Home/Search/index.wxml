@@ -1,1 +1,1 @@
-<view class="search data-v-9535c4e0"><view class="search-content data-v-9535c4e0"><view class="search-content-text data-v-9535c4e0">请输入商品编号/商品描述</view><uni-icons wx:if="{{a}}" class="data-v-9535c4e0" u-i="9535c4e0-0" bind:__l="__l" u-p="{{a}}"></uni-icons></view></view>
+<view class="search data-v-2bdd082c" bindtap="{{b}}"><view class="search-content data-v-2bdd082c"><view class="search-content-text data-v-2bdd082c">请输入游戏名</view><uni-icons wx:if="{{a}}" class="data-v-2bdd082c" u-i="2bdd082c-0" bind:__l="__l" u-p="{{a}}"></uni-icons></view></view>

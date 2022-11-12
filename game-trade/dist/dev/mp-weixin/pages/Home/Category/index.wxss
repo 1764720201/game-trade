@@ -227,13 +227,13 @@
 }
 .chooseArea .footer .confirm.data-v-14aa105d,
 .chooseScreen .footer .confirm.data-v-14aa105d {
-  background-color: #5869ee;
+  background-color: rgb(88, 105, 238);
   color: white;
 }
 .chooseArea .footer .reset.data-v-14aa105d,
 .chooseScreen .footer .reset.data-v-14aa105d {
   background-color: rgba(88, 105, 238, 0.2);
-  color: #5869ee;
+  color: rgb(88, 105, 238);
 }
 .orderList.data-v-14aa105d {
   border-top-right-radius: 30rpx;

@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "genshin-impact": "./GenshinImpact/index",
-    "leagueof-legend": "./LeagueofLegend/index"
+    "leagueof-legend": "./LeagueofLegend/index",
+    "glory-of-the-king": "./GloryOfTheKing/index"
   }
 }

@@ -23,7 +23,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   setup(__props) {
     const store = store_index.useStore();
     const { userId, userInfo } = common_vendor.storeToRefs(store.user);
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const inputDialog = common_vendor.ref(null);
     const bindMobile = () => {
       inputDialog.value.open();

@@ -5,12 +5,9 @@
     "include": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
-    "postcss": false,
     "minified": true,
-    "newFeature": true,
-    "bigPackageSizeSupport": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -18,9 +15,9 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.27.0",
+  "libVersion": "2.27.2",
   "appid": "wx85889263c06da0e3",
-  "projectname": "交易兽",
+  "projectname": "游戏交易",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",

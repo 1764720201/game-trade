@@ -4,7 +4,7 @@
 		v-slot:default="{ data, loading, error }"
 		:collection="collection"
 		orderby="create_time desc"
-		field="screenshot,_id,create_time,game,price,state"
+		field="screenshot,_id,create_time,game,price,state,consignment_id"
 		:getone="false"
 		:where="props.where"
 		:page-size="4"
@@ -34,20 +34,29 @@
 							type="trash"
 							size="20"
 							v-if="item.state == 0"
-							@click="deleteIssue(item._id)"
+							@click="deleteIssue(item._id, 'type')"
 						></uni-icons>
 						<view class="alreadySoldOut" v-if="item.state == 1">
 							<view v-if="collection == 'consignment'">
 								已下架
 							</view>
-							<view v-if="collection == 'purchase'">已支付</view>
+							<view
+								v-if="collection == 'purchase'"
+								@click="confirmTakeGoods(item, 'takegood')"
+								class="take-goods"
+							>
+								确认收货
+							</view>
 						</view>
 						<view class="alreadysell" v-if="item.state == 2">
 							<view v-if="collection == 'consignment'">
 								已售出
 							</view>
-							<view v-if="collection == 'purchase'">
-								交易成功
+							<view
+								v-if="collection == 'purchase'"
+								@click="getAccount(item.consignment_id)"
+							>
+								提取账号
 							</view>
 						</view>
 					</view>
@@ -68,9 +77,15 @@
 			type="warning"
 			cancelText="取消"
 			confirmText="确认"
-			content="你确定要下架商品吗"
+			:content="content"
 			@confirm="dialogConfirm"
 		></uni-popup-dialog>
+	</uni-popup>
+	<uni-popup ref="popup" type="center">
+		<view class="account-info">
+			<view class="account">账号:{{ account }}</view>
+			<view class="password">密码:{{ password }}</view>
+		</view>
 	</uni-popup>
 </template>
 
@@ -82,30 +97,72 @@ const goDetail = (id: string) => {
 		url: `/pages/Detail/index?id=${id}`
 	});
 };
-const udb = ref(null);
-const soldOut = ref(null);
+const content = ref<string>('');
+const udb = ref();
+const soldOut = ref();
+const currentType = ref<string>('');
 // 下架商品
 const currentId = ref<string>();
-const deleteIssue = (id: string) => {
+const deleteIssue = (id: string, type: string) => {
+	currentType.value = type;
 	currentId.value = id;
-	//@ts-ignore
+	content.value = '你确定要下架商品吗';
 	soldOut.value.open('center');
 };
 const db = uniCloud.database();
+const currentConsignmentId = ref<string>();
 const dialogConfirm = async () => {
-	await db
-		.collection('consignment')
-		.where(`_id=='${currentId.value}'`)
-		.update({
-			state: 1
-		});
-	//@ts-ignore
+	if (currentType.value == 'takegood') {
+		await db
+			.collection('purchase')
+			.where(`_id=='${currentId.value}'`)
+			.update({
+				state: 2
+			})
+			.then(() => {
+				db.collection('purchase')
+					.where(`_id=='${currentConsignmentId.value}'`)
+					.update({
+						state: 2
+					});
+			});
+	} else {
+		await db
+			.collection('consignment')
+			.where(`_id=='${currentId.value}'`)
+			.update({
+				state: 1
+			});
+	}
+
 	udb.value.refresh();
 };
 onReachBottom(() => {
-	//@ts-ignore
 	udb.value.loadMore();
 });
+// 确认收货
+const confirmTakeGoods = (item: any, type: string) => {
+	currentConsignmentId.value = item.consignment_id;
+	currentType.value = type;
+	currentId.value = item._id;
+	content.value = '你确定要确认收货吗';
+	soldOut.value.open('center');
+};
+const popup = ref();
+const account = ref<string>('');
+const password = ref<string>('');
+// 获取账密
+const getAccount = async (id: string) => {
+	await db
+		.collection('consignment')
+		.where(`_id=='${id}'`)
+		.get()
+		.then(res => {
+			account.value = res.result.data[0].account;
+			password.value = res.result.data[0].password;
+		});
+	popup.value.open();
+};
 </script>
 
 <style lang="scss" scoped>
@@ -143,10 +200,18 @@ onReachBottom(() => {
 				margin-left: 220rpx;
 				text-align: center;
 				.alreadySoldOut {
+					width: 135rpx;
 					color: red;
 					font-size: 20rpx;
+					.take-goods {
+						box-shadow: 0 0 10rpx #ccc;
+						padding: 10rpx 20rpx;
+						border-radius: 25rpx;
+						color: skyblue;
+					}
 				}
 				.alreadysell {
+					width: 135rpx;
 					color: green;
 					font-size: 20rpx;
 				}
@@ -164,5 +229,15 @@ onReachBottom(() => {
 	flex-direction: column;
 	align-items: center;
 	color: #666;
+}
+.account-info {
+	width: 400rpx;
+	height: 300rpx;
+	background-color: #fff;
+	border-radius: 30rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 }
 </style>

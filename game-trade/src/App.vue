@@ -9,7 +9,7 @@ onLaunch(async () => {
 	await store.user.getUserInfo();
 	await store.user.getBalance();
 });
-onShow(() => {
+onShow(async () => {
 	console.log('App Show');
 });
 onHide(() => {

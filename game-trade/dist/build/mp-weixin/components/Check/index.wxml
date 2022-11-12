@@ -1,1 +1,1 @@
-<view class="check data-v-a930002c"><view class="title data-v-a930002c">{{a}}</view><uni-data-checkbox wx:if="{{d}}" class="data-v-a930002c" bindchange="{{b}}" u-i="a930002c-0" bind:__l="__l" bindupdateModelValue="{{c}}" u-p="{{d}}"></uni-data-checkbox></view>
+<view class="check data-v-300c8b59"><view class="title data-v-300c8b59">{{a}}</view><uni-data-checkbox wx:if="{{d}}" class="data-v-300c8b59" bindchange="{{b}}" u-i="300c8b59-0" bind:__l="__l" bindupdateModelValue="{{c}}" u-p="{{d}}"></uni-data-checkbox></view>

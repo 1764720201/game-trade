@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "专属客服",
+  "usingComponents": {
+    "uni-dateformat": "../../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat"
+  }
+}

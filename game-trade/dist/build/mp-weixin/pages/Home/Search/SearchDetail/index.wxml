@@ -1,0 +1,1 @@
+<d-search-log wx:if="{{c}}" class="data-v-1240cb3e" bindonClickDelAllApi="{{a}}" bindonSearchNameApi="{{b}}" u-i="1240cb3e-0" bind:__l="__l" u-p="{{c}}"></d-search-log><view class="list data-v-1240cb3e"><list wx:if="{{d}}" class="data-v-1240cb3e" u-i="1240cb3e-1" bind:__l="__l" u-p="{{e}}"></list></view>

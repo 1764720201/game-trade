@@ -35,7 +35,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       await getConsult();
       scrollToView.value = "msg" + consultList.value[consultList.value.length - 1]._id;
     });
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const sendContent = async () => {
       if (!content.value) {
         common_vendor.index.showToast({

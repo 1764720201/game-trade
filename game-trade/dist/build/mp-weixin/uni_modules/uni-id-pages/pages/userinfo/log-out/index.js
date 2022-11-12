@@ -1,0 +1,1 @@
+"use strict";var e=require("../../../../../common/vendor.js"),o=require("../../../common/store.js");const t=e.defineComponent({__name:"index",setup:t=>(t,n)=>({a:e.o(((...t)=>e.unref(o.mutations).logout&&e.unref(o.mutations).logout(...t)))})});var n=e._export_sfc(t,[["__scopeId","data-v-f33e59d2"]]);wx.createComponent(n);

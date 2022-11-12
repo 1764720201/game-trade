@@ -2,7 +2,7 @@
 var common_vendor = require("../../../../common/vendor.js");
 const _sfc_main = {
   name: "uni-stat-select",
-  mixins: [common_vendor.pn.mixinDatacom || {}],
+  mixins: [common_vendor.rn.mixinDatacom || {}],
   data() {
     return {
       showSelector: false,

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "帮助中心",
+  "usingComponents": {
+    "help-centre": "../../../../components/HelpCentre/index",
+    "consult": "../../../../components/Button/index"
+  }
+}

@@ -151,7 +151,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
     const categoryList = common_vendor.reactive([]);
     const allCategoryList = common_vendor.reactive([]);
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     common_vendor.onLoad(async () => {
       await db.collection("category").orderBy("order", "asc").get().then((res) => {
         categoryList.push(...res.result.data.slice(0, 4));

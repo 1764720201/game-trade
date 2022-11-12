@@ -49,7 +49,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       await store.user.getUserInfo();
       await store.user.getBalance();
     });
-    common_vendor.onShow(() => {
+    common_vendor.onShow(async () => {
       console.log("App Show");
     });
     common_vendor.onHide(() => {

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "意见与反馈",
+  "usingComponents": {
+    "file": "../../../../../components/File/index",
+    "submit": "../../../../../components/Button/index"
+  }
+}

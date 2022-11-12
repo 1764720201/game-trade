@@ -21,12 +21,14 @@
 			position="left"
 			type="number"
 			tips="请输入提现金额"
+			@input="getPrice"
 		></InputBox>
 		<InputBox
 			title="支付宝"
 			position="left"
 			type="text"
 			tips="请输入支付宝账号"
+			@input="getAccount"
 		>
 			<image
 				class="image"
@@ -35,7 +37,7 @@
 			></image>
 		</InputBox>
 		<view class="tips">支付宝真实姓名与实名认证姓名相同才可提现成功</view>
-		<Deposit title="提现"></Deposit>
+		<Deposit title="提现" @click="withdraw"></Deposit>
 	</view>
 	<uni-popup ref="inputDialog" type="dialog">
 		<uni-popup-dialog
@@ -78,6 +80,47 @@ const confirmRecharge = async (e: string) => {
 	store.user.getBalance();
 	uni.showToast({
 		title: '充值成功'
+	});
+};
+// 提现的金额
+const price = ref<number>();
+const getPrice = (e: number) => {
+	price.value = e;
+};
+// 支付宝账号
+const account = ref<string>('');
+const getAccount = (e: string) => {
+	account.value = e;
+};
+
+const withdraw = async () => {
+	if (!price.value) {
+		uni.showToast({
+			title: '请输入提现的金额',
+			icon: 'none'
+		});
+		return;
+	}
+	if (!account.value) {
+		uni.showToast({
+			title: '请输入支付宝账号',
+			icon: 'none'
+		});
+		return;
+	}
+	if (price.value > balance.value) {
+		uni.showToast({
+			title: '提现的金额不能大于余额',
+			icon: 'none'
+		});
+		return;
+	}
+	await db.collection('balance').add({
+		money: -Number(price.value)
+	});
+	store.user.getBalance();
+	uni.showToast({
+		title: '提现成功'
 	});
 };
 </script>

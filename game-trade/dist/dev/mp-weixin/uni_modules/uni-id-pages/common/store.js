@@ -1,7 +1,7 @@
 "use strict";
 var common_vendor = require("../../../common/vendor.js");
-const uniIdCo = common_vendor.pn.importObject("uni-id-co");
-const db = common_vendor.pn.database();
+const uniIdCo = common_vendor.rn.importObject("uni-id-co");
+const db = common_vendor.rn.database();
 const usersTable = db.collection("uni-id-users");
 let hostUserInfo = common_vendor.index.getStorageSync("uni-id-pages-userInfo") || {};
 console.log(hostUserInfo);

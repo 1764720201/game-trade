@@ -265,7 +265,7 @@ const _sfc_main = {
           title: loadingTitle
         });
       }
-      let db = common_vendor.pn.database(this.spaceInfo);
+      let db = common_vendor.rn.database(this.spaceInfo);
       if (action) {
         db = db.action(action);
       }
@@ -337,7 +337,7 @@ const _sfc_main = {
           title: loadingTitle
         });
       }
-      let db = common_vendor.pn.database(this.spaceInfo);
+      let db = common_vendor.rn.database(this.spaceInfo);
       if (action) {
         db = db.action(action);
       }
@@ -364,7 +364,7 @@ const _sfc_main = {
       });
     },
     getTemp(isTemp = true) {
-      let db = common_vendor.pn.database(this.spaceInfo);
+      let db = common_vendor.rn.database(this.spaceInfo);
       if (this.action) {
         db = db.action(this.action);
       }
@@ -486,7 +486,7 @@ const _sfc_main = {
           title: loadingTitle
         });
       }
-      const db = common_vendor.pn.database(this.spaceInfo);
+      const db = common_vendor.rn.database(this.spaceInfo);
       const dbCmd = db.command;
       let exec = db;
       if (action) {

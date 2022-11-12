@@ -119,7 +119,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         }
       );
     };
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const publish = async () => {
       consignment.price = Number(consignment.price);
       consignment.state = 0;

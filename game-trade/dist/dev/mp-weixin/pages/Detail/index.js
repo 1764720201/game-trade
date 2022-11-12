@@ -49,7 +49,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         text: "\u6E38\u620F\u4EA4\u6D41\u7FA4"
       }
     ]);
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     common_vendor.onLoad(async (options2) => {
       detail._id = options2.id;
       await db.collection("consignment").where(`_id=='${options2.id}'`).get({ getOne: true }).then(async (res) => {
@@ -59,7 +59,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       store.detail.getDetail(detail);
     });
     const verifyCollect = async () => {
-      await db.collection("collect").where(`consignment_id=='${detail._id}'&&user_id=='${detail.user_id}'`).get({ getOne: true }).then((res) => {
+      await db.collection("collect").where(`consignment_id=='${detail._id}'&&user_id=='${userId.value}'`).get({ getOne: true }).then((res) => {
         if (res.result.data) {
           collected.value = true;
         } else {
@@ -70,6 +70,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       });
     };
     const collected = common_vendor.ref(false);
+    const { userId } = common_vendor.storeToRefs(store.user);
     const collect = async () => {
       if (!collected.value) {
         await db.collection("collect").add({
@@ -82,7 +83,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         });
       } else {
         await db.collection("collect").where(
-          `consignment_id=='${detail._id}'&&user_id=='${detail.user_id}'`
+          `consignment_id=='${detail._id}'&&user_id=='${userId.value}'`
         ).remove().then(async () => {
           await verifyCollect();
           common_vendor.index.showToast({
@@ -95,6 +96,11 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const goBuy = () => {
       common_vendor.index.navigateTo({
         url: `/pages/Detail/Buy/index?id=${detail._id}`
+      });
+    };
+    const goConsult = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/Message/Consult/index"
       });
     };
     return (_ctx, _cache) => {
@@ -127,15 +133,15 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         e: detail._id,
         f: common_vendor.p({
           option: option.value,
-          game: detail.game,
-          id: detail._id
+          game: detail.game
         }),
         g: common_vendor.p({
           type: collected.value ? "star-filled" : "star",
           size: "27"
         }),
         h: common_vendor.o(collect),
-        i: common_vendor.o(goBuy)
+        i: common_vendor.o(goConsult),
+        j: common_vendor.o(goBuy)
       };
     };
   }

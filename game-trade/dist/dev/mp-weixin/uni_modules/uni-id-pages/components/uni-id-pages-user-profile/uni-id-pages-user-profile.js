@@ -1,6 +1,6 @@
 "use strict";
 var common_vendor = require("../../../../common/vendor.js");
-const db = common_vendor.pn.database();
+const db = common_vendor.rn.database();
 const usersTable = db.collection("uni-id-users");
 let userId = "";
 const _sfc_main = {
@@ -46,7 +46,7 @@ const _sfc_main = {
       });
       const extName = tempFilePath.split(".").pop() || "jpg";
       const cloudPath = "user/avatar/" + userId + "/" + Date.now() + "-avatar." + extName;
-      const result = await common_vendor.pn.uploadFile({
+      const result = await common_vendor.rn.uploadFile({
         filePath: tempFilePath,
         cloudPath,
         fileType: "image"

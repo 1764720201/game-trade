@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "我发布的",
   "usingComponents": {
-    "my-issue": "../../../../components/MyIssue/index"
+    "about-option": "../../../../components/AboutOption/index",
+    "about": "../../../../components/About/index"
   }
 }

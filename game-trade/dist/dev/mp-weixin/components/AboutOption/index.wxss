@@ -62,10 +62,18 @@
   text-align: center;
 }
 .list .item .right .delete .alreadySoldOut.data-v-eb73a736 {
+  width: 135rpx;
   color: red;
   font-size: 20rpx;
 }
+.list .item .right .delete .alreadySoldOut .take-goods.data-v-eb73a736 {
+  box-shadow: 0 0 10rpx #ccc;
+  padding: 10rpx 20rpx;
+  border-radius: 25rpx;
+  color: skyblue;
+}
 .list .item .right .delete .alreadysell.data-v-eb73a736 {
+  width: 135rpx;
   color: green;
   font-size: 20rpx;
 }
@@ -79,4 +87,14 @@
   flex-direction: column;
   align-items: center;
   color: #666;
+}
+.account-info.data-v-eb73a736 {
+  width: 400rpx;
+  height: 300rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }

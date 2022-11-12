@@ -16,7 +16,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const store = store_index.useStore();
     const { userInfo } = common_vendor.storeToRefs(store.user);
     const newName = common_vendor.ref(userInfo.value.nickname);
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const confirmAmend = async () => {
       await db.collection("uni-id-users").where(`_id=='${userInfo.value._id}'`).update({
         nickname: newName.value

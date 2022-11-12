@@ -28,7 +28,9 @@ import useStore from '@/store';
 const store = useStore();
 // // 获取保存在pinia的用户信息
 const { userInfo } = storeToRefs(store.user);
-
+onLoad(() => {
+	store.user.getUserInfo();
+});
 const goAmend = () => {
 	uni.navigateTo({
 		url: '/pages/Mine/Data/Amend/index'

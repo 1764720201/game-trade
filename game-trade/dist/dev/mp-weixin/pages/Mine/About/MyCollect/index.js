@@ -18,7 +18,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "index",
   setup(__props) {
     const store = store_index.useStore();
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const collectList = common_vendor.ref([]);
     const getCollectList = async () => {
       const { userId } = common_vendor.storeToRefs(store.user);

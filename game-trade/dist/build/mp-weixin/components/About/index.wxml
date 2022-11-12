@@ -1,0 +1,1 @@
+<view class="options data-v-ec688c48"><view wx:for="{{a}}" wx:for-item="item" wx:key="b" class="item data-v-ec688c48" bindtap="{{item.c}}" style="{{item.d}}">{{item.a}}</view></view>

@@ -37,10 +37,10 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           where.value = `user_id=='${userId.value}'`;
           break;
         case 1:
-          where.value = `user_id=='${userId.value}'&&state==${1}`;
+          where.value = `user_id=='${userId.value}'&&state==1`;
           break;
         case 2:
-          where.value = `user_id=='${userId.value}'&&state==${2}`;
+          where.value = `user_id=='${userId.value}'&&state==2`;
           break;
       }
     };

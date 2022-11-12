@@ -15,7 +15,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const db = common_vendor.pn.database();
+    const db = common_vendor.rn.database();
     const userName = common_vendor.ref();
     const icon = common_vendor.ref();
     common_vendor.watch(() => {

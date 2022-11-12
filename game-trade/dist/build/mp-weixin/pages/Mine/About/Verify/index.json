@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的收藏",
+  "navigationBarTitleText": "验证客服",
   "usingComponents": {
     "verify": "../../../../components/Button/index"
   }
